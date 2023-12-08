@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import SidebarApp from "./components/Sidebar/App";
+import Navbar from "./components/Navbar/Navbar";
+import Phasemanager from "./components/PhaseManager/PhaseManager";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex h-screen">
+      {/* Sidebar */}
+      <SidebarApp>
+        {/* Sidebar items */}
+        {/* ... */}
+      </SidebarApp>
+
+      {/* Content area */}
+      <div className="flex-1 flex flex-col">
+        {/* Navbar */}
+        <Navbar />
+
+        {/* Main content */}
+        <main className="flex-1 flex">
+          {/* First part taking 20% of remaining space */}
+          <div className="w-1/4 ">
+            <Phasemanager />
+          </div>
+
+          {/* Second part taking the rest */}
+          <div className="flex-1 bg-gray-300">Rest of the space</div>
+        </main>
+      </div>
     </div>
   );
 }
-
-export default App;
