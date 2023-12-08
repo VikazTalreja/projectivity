@@ -17,7 +17,7 @@ export default function SidebarApp() {
           active
         />
         <SidebarItem
-          icon={<img src={ID} alt="Id" className="w-6 h-5 rounded-md" />}
+          icon={<img src={ID} alt="Id" className="w-6  h-5 rounded-md" />}
           text="Option 2"
         />
         <SidebarItem
@@ -29,7 +29,9 @@ export default function SidebarApp() {
           text="Option 4"
         />
         <SidebarItem
-          icon={<img src={ID} alt="Id" className="w-6 h-5 rounded-md" />}
+          icon={
+            <img src={ID} alt="Id" className="w-6 h-5 m-0 p-0 rounded-md" />
+          }
           text="Option 5"
         />
         <SidebarItem

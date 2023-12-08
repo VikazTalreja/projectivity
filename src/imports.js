@@ -9,6 +9,7 @@ import Search from "./assets/Images/search.png";
 import chat from "./assets/Images/message.png";
 import JohnDoe from "./assets/Images/JohnDoe.png";
 import dropdown from "./assets/Images/dropdown.png";
+import pullup from "./assets/Images/PullUp.png";
 export {
   Logo,
   Statistics,
@@ -21,4 +22,5 @@ export {
   chat,
   JohnDoe,
   dropdown,
+  pullup,
 };

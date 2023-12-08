@@ -57,8 +57,8 @@ const PhaseManager = () => {
 
   return (
     <>
-      <main className="ml-[80px]">
-        <div className="text-2xl text-center mt-2 font-bold">
+      <main className="ml-[80px] bg-[#F4F6FF]">
+        <div className="text-2xl text-center mt-2 font-bold  ">
           <h1>Task Manager</h1>
         </div>
         <div className="flex justify-end">
@@ -77,24 +77,27 @@ const PhaseManager = () => {
         </div>
         {accordions.map((accordion, index) => (
           <Accordion key={index} open={accordion.isOpen}>
-            <AccordionHeader
-              className="border-0 cursor-pointer mt-0"
-              onClick={() => handleToggle(index)}
-            >
-              <div className="flex flex-row w-full h-[40px]">
-                <div className="w-1/6 bg-blue-300">
-                  <img src={chat} alt={`Chat ${index}`} />
+            <div className="bg-blue-500">
+              <AccordionHeader
+                className="border-0 cursor-pointer mt-0"
+                onClick={() => handleToggle(index)}
+              >
+                <div className="flex flex-row w-full h-[40px] bg-black">
+                  <div className="w-1/6 bg-blue-300">
+                    <img src={chat} alt={`Chat ${index}`} />
+                  </div>
+                  <div className="w-1/3 bg-black">{accordion.title}</div>
                 </div>
-                <div className="w-1/3 bg-black">{accordion.title}</div>
-              </div>
-            </AccordionHeader>
-            <AccordionBody>
-              <ul>
-                {accordion.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>{item}</li>
-                ))}
-              </ul>
-            </AccordionBody>
+              </AccordionHeader>
+              <AccordionBody>
+                <ul>
+                  {accordion.items.map((item, itemIndex) => (
+                    <li key={itemIndex}>{item}</li>
+                  ))}
+                </ul>
+              </AccordionBody>
+            </div>
+            <br />
           </Accordion>
         ))}
       </main>
