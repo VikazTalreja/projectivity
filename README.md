@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+Project Name: Task-Management Web-app
+This project encompasses a comprehensive interface with various components designed for efficient task management, and user interaction.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Introduction
+This project focuses on creating an intuitive interface with multiple components, allowing users to manage tasks, navigate through different sections, and interact seamlessly.
 
-## Available Scripts
+Components
+Sidebar
+The Sidebar component is responsible for providing a navigational menu. It showcases various options and sections available within the application. Each option is represented by an icon and text for easy recognition.
 
-In the project directory, you can run:
+NavigationBar
+The NavigationBar component offers a top navigation section, including quick-access icons for essential functionalities like search, notifications, chat, and user settings. It provides an interactive dropdown for user profile management.
 
-### `npm start`
+KanbanBoard
+The KanbanBoard component serves as a task management system using a Kanban view. It allows users to organize tasks into different columns like "ToDo," "InProgress," and "Done," with drag-and-drop functionality.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+TaskData
+TaskData acts as the data source for tasks displayed on the KanbanBoard. It holds information about tasks in various stages, including their titles, dates, descriptions, completion percentages, and associated images or users.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Column
+The Column component represents individual columns within the KanbanBoard, displaying tasks grouped under specific statuses. It facilitates drag-and-drop operations for moving tasks between columns and offers task-specific interaction options.
 
-### `npm test`
+Installation
+To run this project locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clone the repository.
+Install dependencies using npm install.
+Start the development server with npm start.
 
-### `npm run build`
+Usage
+Each component has specific usage instructions outlined within its respective file. To integrate these components into a project, import and use them according to the provided guidelines.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributing
+As this is a solo project, contributions aren't currently open. However, suggestions or feedback are welcome through issues or discussions.

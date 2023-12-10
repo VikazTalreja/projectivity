@@ -1,6 +1,7 @@
 import img1 from "../../assets/Images/bg1.png";
 import img2 from "../../assets/Images/bg2.png";
 import img3 from "../../assets/Images/coffee.png";
+import { pfp1, pfp2, pfp3 } from "../../imports";
 const tasks = {
   ToDo: [
     {
@@ -20,6 +21,7 @@ const tasks = {
       date: "May 20, 2022",
       desc: "Add a Short Description or Link a Web Page",
       Completed: "10",
+      user: pfp1,
     },
   ],
   Done: [
@@ -30,6 +32,8 @@ const tasks = {
       date: "sep 3, 2023",
       desc: "Add a Short Description or Link a Web Page",
       Completed: "100",
+      users: pfp2,
+      pfp1,
     },
     {
       id: 7,
@@ -38,6 +42,7 @@ const tasks = {
       date: "May 1 2023",
       desc: "Add a Short Description or Link a Web Page",
       Completed: "100",
+      pfp3,
     },
   ],
 };

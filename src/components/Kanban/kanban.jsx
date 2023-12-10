@@ -44,7 +44,7 @@ const KanbanBoard = () => {
   };
 
   return (
-    <div className="flex-1 w-full justify-center">
+    <div className="flex-1 w-screen md:w-full justify-center">
       <div className="flex-1 flex-col mt-2">
         {/* Header section */}
         <div className="mt-7 h-12 grid grid-cols-2 mb-7 ">
@@ -68,7 +68,7 @@ const KanbanBoard = () => {
         </div>
 
         {/* Columns and "More Column +" section */}
-        <div className="flex flex-row justify-start space-x-5 ml-2">
+        <div className="flex flex-col md:flex-row justify-start md:space-x-5 space-y-2 md:space-y-0 ml-0 md:ml-2">
           <Column
             status="ToDo"
             tasks={boardTasks.ToDo}
@@ -91,9 +91,9 @@ const KanbanBoard = () => {
             handleDrop={handleDrop}
           />
           {/* "More Column +" section */}
-          <div className="flex flex-col items-end">
-            <div className="h-[240px] w-16 bg-blue-400 bg-opacity-10 text-blue-800 rounded-lg text-lg flex flex-row justify-center items-center font-bold">
-              <span className="flex flex-row -rotate-90 whitespace-nowrap">
+          <div className="flex flex-col items-center  md:items-end">
+            <div className=" h-[50px] md:h-[240px] w-screen md:w-16 bg-blue-400 py-3 mx-4 md:mx-0 md:p-0 bg-opacity-10 text-blue-800 rounded-lg text-lg flex flex-row justify-center items-center font-bold">
+              <span className="flex flex-row md:-rotate-90 whitespace-nowrap">
                 More Column
                 <img src={roundedplus} className="ml-2" />
               </span>

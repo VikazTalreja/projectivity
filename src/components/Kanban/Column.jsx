@@ -28,7 +28,7 @@ const Column = ({
 
   return (
     <div
-      className={`w-[320px]  h-fit bg-gray-600 bg-opacity-10 border-1 border-white  p-4 rounded-lg`}
+      className={`  md:w-[320px] h-fit bg-gray-600 bg-opacity-10 border-1 border-white  p-4 rounded-lg`}
       onDragOver={(e) => handleDragOver(e)}
       onDrop={(e) => handleDrop(e, status)}
     >
@@ -51,7 +51,7 @@ const Column = ({
             </div>
           )}
           <div className="grid grid-cols-2">
-            <div className="text-start justify-start mt-1 font-bold text-blue-gray-700">
+            <div className="text-start justify-start mt-1  font-bold text-blue-gray-700">
               {task.title}
             </div>
             <div className="justify-end text-end">

@@ -1,5 +1,5 @@
 import "./App.css";
-import SidebarApp from "./components/Sidebar/App";
+import SidebarApp from "./components/Sidebar/Items";
 import Navbar from "./components/Navbar/Navbar";
 import Phasemanager from "./components/PhaseManager/PhaseManager";
 import KanbanBoard from "./components/Kanban/kanban";
@@ -7,18 +7,14 @@ export default function App() {
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
-      <SidebarApp>
-        {/* Sidebar items */}
-        {/* ... */}
-      </SidebarApp>
+      <SidebarApp></SidebarApp>
 
       {/* Content area */}
-      <div className="flex-1 flex flex-col">
+      <div>
         {/* Navbar */}
         <Navbar />
-
         {/* Main content */}
-        <main className="flex-1 flex bg-[#F4F6FF]">
+        <main className="flex flex-col md:flex-row bg-[#F4F6FF]">
           {/* First part taking 20% of remaining space */}
           <div className="w-1/3 ">
             <Phasemanager />

@@ -27,7 +27,9 @@ import pfp1 from "./assets/Images/pfp1.png";
 import pfp2 from "./assets/Images/pfp2.png";
 import pfp3 from "./assets/Images/pfp3.png";
 import pfp4 from "./assets/Images/pfp4.png";
+import cross from "./assets/Images/cross.png";
 export {
+  cross,
   pfp1,
   pfp2,
   pfp3,
