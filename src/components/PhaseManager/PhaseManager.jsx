@@ -5,7 +5,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import { chat } from "../../imports";
+import { pfp1, pfp2, pfp3, pfp4 } from "../../imports";
 
 const PhaseManager = () => {
   const [accordions, setAccordions] = useState([]);
@@ -15,12 +15,12 @@ const PhaseManager = () => {
     setAccordions([
       {
         title: "Phase 1",
-        items: ["Option 1", "option 2"],
+        items: ["Option 1", "Option 2"],
         isOpen: false,
       },
       {
         title: "Phase 2",
-        items: ["Option 1", "option 2"],
+        items: ["Option 1", "Option 2"],
         isOpen: false,
       },
       {
@@ -31,7 +31,7 @@ const PhaseManager = () => {
       {
         title: "Pre-Production",
         items: ["Editing", "Composing"],
-        isOpen: true,
+        isOpen: false,
       },
     ]);
   }, []);
@@ -55,18 +55,27 @@ const PhaseManager = () => {
     setShowForm(false);
   };
 
+  const colors = [
+    "bg-red-500",
+    "bg-green-500",
+    "bg-blue-500",
+    "bg-indigo-500",
+    "bg-yellow-500",
+    // Add more valid Tailwind CSS color classes as needed
+  ];
+
   return (
     <>
-      <main className="ml-[80px] bg-[#F4F6FF]">
-        <div className="text-2xl text-center mt-2 font-bold  ">
+      <main className="ml-[80px] mr-3">
+        <div className="text-4xl text-center mt-5 font-bold">
           <h1>Task Manager</h1>
         </div>
         <div className="flex justify-end">
           <button
-            className="px-3 py-1 bg-blue-500 rounded-md text-center font-semibold text-white text-[10px] mt-4 mr-5"
+            className="px-3 py-1 bg-blue-500 rounded-md text-center font-medium text-white text-[12px] mt-3 mr-[-5px] mb-0"
             onClick={addAccordion}
           >
-            + phase
+            + Phase
           </button>
           {showForm && (
             <AccordionForm
@@ -76,28 +85,80 @@ const PhaseManager = () => {
           )}
         </div>
         {accordions.map((accordion, index) => (
-          <Accordion key={index} open={accordion.isOpen}>
-            <div className="bg-blue-500">
-              <AccordionHeader
-                className="border-0 cursor-pointer mt-0"
-                onClick={() => handleToggle(index)}
-              >
-                <div className="flex flex-row w-full h-[40px] bg-black">
-                  <div className="w-1/6 bg-blue-300">
-                    <img src={chat} alt={`Chat ${index}`} />
+          <Accordion
+            className="py-2 w-full mx-3 bg-white my-[6px] rounded-md"
+            key={index}
+            open={accordion.isOpen}
+          >
+            <div className=" h-fit rounded-lg mx-1">
+              <AccordionHeader className="border-0 cursor-pointer py-3 mt-0">
+                <div className="flex flex-row w-full justify-center space-x-1 h-[40px]">
+                  <div className={`w-1/6  p-2`}>
+                    <div
+                      className={`border-[1.5px] border-opacity-30 border-black 
+                      ${colors[index % colors.length]} bg-opacity-80
+                          w-[16px] h-[16px] mt-2 flex items-center justify-center text-center text-sm rounded-[4px] ${
+                            accordion.isOpen
+                              ? "bg-transparent text-gray-400"
+                              : "text-white"
+                          }
+                  
+                      `}
+                      onClick={() => handleToggle(index)}
+                    >
+                      {accordion.isOpen ? "-" : "+"}
+                    </div>
                   </div>
-                  <div className="w-1/3 bg-black">{accordion.title}</div>
+                  <div className="w-1/2 text-start mt-4 font-extrabold text-xs    ">
+                    {accordion.title}
+                  </div>
+                  <div className="w-1/4 flex flex-row text-center">
+                    <div className="mx-3 flex flex-row-50  items-center justify-center w-full relative">
+                      <div className="z-50 rounded-full h-[30px] w-[30px] shadow-sm overflow-hidden absolute bottom-0">
+                        <img
+                          src={pfp1}
+                          className="h-full w-full object-cover object-center"
+                          alt="Profile picture"
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                      <div className="z-40 -ml-9 rounded-full h-[30px] w-[30px] shadow-sm  overflow-hidden absolute bottom-0">
+                        <img
+                          src={pfp4}
+                          className="h-full w-full object-cover object-center"
+                          alt="Profile picture"
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                      <div className="z-30 -ml-16 rounded-full h-[30px] w-[30px] shadow-sm   overflow-hidden absolute bottom-0">
+                        <img
+                          src={pfp3}
+                          className="h-full w-full object-cover object-center"
+                          alt="Profile picture"
+                          style={{ objectFit: "cover" }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <button className="w-fit h-full flex text-gray-800 items-center justify-center ml-1 text-center">
+                    ...
+                  </button>
                 </div>
               </AccordionHeader>
-              <AccordionBody>
-                <ul>
+              <AccordionBody
+                className="text-xs font-semibold text-gray-400 flex 
+                  justify-start text-start mb-2 py-1"
+              >
+                <ul className="mt-0 ml-11  ">
                   {accordion.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>{item}</li>
+                    <li className="mb-5 cursor-pointer" key={itemIndex}>
+                      {item}
+                    </li>
                   ))}
                 </ul>
               </AccordionBody>
             </div>
-            <br />
           </Accordion>
         ))}
       </main>

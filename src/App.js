@@ -18,14 +18,14 @@ export default function App() {
         <Navbar />
 
         {/* Main content */}
-        <main className="flex-1 flex">
+        <main className="flex-1 flex bg-[#F4F6FF]">
           {/* First part taking 20% of remaining space */}
-          <div className="w-1/4  ">
+          <div className="w-1/3 ">
             <Phasemanager />
           </div>
 
           {/* Second part taking the rest */}
-          <div className="flex-1 bg-indigo-400 bg-opacity-20">
+          <div>
             <KanbanBoard />
           </div>
         </main>

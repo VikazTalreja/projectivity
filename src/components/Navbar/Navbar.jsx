@@ -16,24 +16,24 @@ export default function NavigationBar() {
   };
 
   return (
-    <nav className="flex justify-end space-x-7 p-3 items-center h-[90px] bg-white text-white">
-      <div className="flex items-center justify-center h-14 w-14 rounded-full bg-white border-3 drop-shadow-lg box- cursor-pointer">
-        <img src={Search} alt="Chat" className="w-6 h-6" />
+    <nav className="flex justify-end space-x-7 p-3 items-center h-[70px] bg-white text-white">
+      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-white border-3 shadow-md shadow-gray-500 cursor-pointer">
+        <img src={Search} alt="Chat" className="w-5 h-5" />
       </div>
-      <div className="flex items-center justify-center h-14 w-14 rounded-full  bg-white border-3 drop-shadow-lg cursor-pointer">
-        <img src={Notification_2} alt="Chat" className="w-6 h-6" />
+      <div className="flex items-center justify-center h-14 w-14 rounded-full  bg-white border-3 shadow-md shadow-gray-500 cursor-pointer">
+        <img src={Notification_2} alt="Chat" className="w-5 h-5 " />
       </div>
-      <div className="flex items-center justify-center h-14 w-14 rounded-full  bg-white border-3 drop-shadow-lg cursor-pointer">
+      <div className="flex items-center justify-center h-14 w-14 rounded-full  bg-white border-3 shadow-md shadow-gray-500 cursor-pointer">
         <img src={chat} alt="Chat" className="w-6 h-6" />
       </div>
-      <div className="flex items-center justify-center h-14 w-14 rounded-full  bg-white border-3 drop-shadow-lg cursor-pointer">
+      <div className="flex items-center justify-center h-14 w-14 rounded-full  bg-white border-3 shadow-md shadow-gray-500 cursor-pointer">
         <img src={Notification_1} alt="Chat" className="w-6 h-6" />
       </div>
 
       <div className="relative inline-block">
         <button>
           <div
-            className="flex items-center h-14 w-[180px] rounded-full  bg-white border-3 drop-shadow-lg cursor-pointer text-black"
+            className="flex items-center h-14 w-[180px] rounded-full  bg-white border-3 shadow-md shadow-gray-500 cursor-pointer text-black"
             onClick={toggleDropdown}
           >
             {/*John Doe content */}
@@ -53,12 +53,11 @@ export default function NavigationBar() {
             <img src={dropdown} alt="drop-down" className="w-5 h-3 ml-5" />
           </div>
           {showDropdown && (
-            <div className="absolute flex bg-white my-1 text-black py-4 w-[170px] text-start font-light text-sm right-0 rounded-md">
-              <ul>
+            <div className="absolute flex bg-white my-1 shadow-md shadow-gray-500 z-30 text-black py-4 w-[170px] text-start font-light text-sm right-0 rounded-md">
+              <ul className="ml-2">
                 <li className="mb-3">Edit Prodile</li>
-                <hr className="w-full" />
+                <hr className="w-full h-[2px] bg-black bg-opacity-20" />
                 <li className="mt-3">Logout</li>
-                {/* Add other dropdown options */}
               </ul>
             </div>
           )}
